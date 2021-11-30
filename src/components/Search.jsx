@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
 import { useEffect, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
+
 export function Search() {
+    const host = "/movies-react/";
     const navigate = useNavigate();
     const query = useQuery();
     const search = query.get("search");
@@ -28,7 +30,7 @@ export function Search() {
                     value={searchtext}
                     onChange={(e) => {
                         const value = e.target.value.trimStart();
-                        navigate("/?search=" + value);
+                        navigate(`${host}?search=${value}`);
                         setSearchText(value);
                     }}
                 />
