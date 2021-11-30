@@ -18,10 +18,10 @@ export function App() {
                 <Routes>
                     <Route
                         exact
-                        path="/movies/:movieId"
+                        path={host+"movies/:movieId"}
                         element={<MovieDetails />}
                     ></Route>
-                    <Route path="/movies-react/" element={<LandingPages />}></Route>
+                    <Route path={host} element={<LandingPages />}></Route>
                 </Routes>
             </main>
         </Router>

@@ -4,9 +4,9 @@ import { getMovieImg } from "../utils/getMovieImg";
 
 export function MovieCard({ movie }) {
     const imageUrl = getMovieImg(movie.poster_path, 300);
-
+    const host = "/movies-react/";
     return (
-        <Link to={"/movies/" + movie.id}>
+        <Link to={`${host}movies/${movie.id}`}>
             <li className={styles.movieCard}>
                 <img
                     width={300}
