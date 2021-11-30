@@ -1,0 +1,54 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.searchBox {
+    position: relative;
+}
+
+.searchButton {
+    position: absolute;
+    right: .5rem;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: none;
+    transition: .3s border ease-out;
+    color: black;
+}
+
+.searchInput {
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    height: 3rem;
+    padding: .5rem 3rem .5rem 1rem;
+    border: 1px solid white;
+}
+
+.searchInput:focus,
+.searchButton:focus {
+    outline: none;
+    border: 1px solid #e60073;
+    box-shadow: 0 0 5px #ebbed4;
+}
+.deleteButton {
+    position: absolute;
+    right: 3rem;
+    top: .5rem;
+    border: none;
+    background: none;
+    transition: .3s border ease-out;
+    color: black;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-right: 1px solid gray;
+    padding: 0 .3rem 0 0;
+}
+.hidden {
+    display: none;
+}
+
+.display {
+    display: block;
+}

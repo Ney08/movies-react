@@ -1,0 +1,33 @@
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    max-width: 40rem;
+    margin: 1.5rem;
+    height: auto;
+    height: 80%;
+}
+
+.movieImage {
+    border-radius: 1.5rem;
+}
+
+.movieDetails {
+    font-size: 1.5rem;
+}
+
+.firstItem {
+    margin-top: 0;
+}
+
+.voteAverage {
+    background: red;
+    padding: 0 1.5rem .2rem;
+    border-radius: .8rem;
+    margin: 0 5rem 0 0;
+    text-align: center;
+    
+}

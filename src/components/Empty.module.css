@@ -1,0 +1,11 @@
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    margin: 4rem;
+}
+
+.sad {
+    margin: 2rem;
+}
