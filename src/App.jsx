@@ -6,11 +6,11 @@ import { MovieDetails } from "./pages/MovieDetails";
 import { LandingPages } from "./pages/LandingPages";
 
 export function App() {
-    const host = "/movies-react/";
+    const path = "/movies-react/";
     return (
         <Router>
             <header>
-                <Link to={host}>
+                <Link to={path}>
                     <h1 className={styles.title}>Movies</h1>
                 </Link>
             </header>
@@ -18,10 +18,10 @@ export function App() {
                 <Routes>
                     <Route
                         exact
-                        path={host+"movies/:movieId"}
+                        path={path+"movies/:movieId"}
                         element={<MovieDetails />}
                     ></Route>
-                    <Route path={host} element={<LandingPages />}></Route>
+                    <Route path={path} element={<LandingPages />}></Route>
                 </Routes>
             </main>
         </Router>
