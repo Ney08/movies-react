@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 
 export function Search() {
-    const host = "/movies-react/";
+    const host = "/";
     const navigate = useNavigate();
     const query = useQuery();
     const search = query.get("search");
