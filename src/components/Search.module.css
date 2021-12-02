@@ -18,7 +18,7 @@
     border: none;
     background: none;
     transition: .3s border ease-out;
-    color: black;
+    color: #111;
 }
 
 .searchInput {
@@ -39,14 +39,14 @@
     position: absolute;
     right: 3rem;
     top: .5rem;
-    border: none;
     background: none;
     transition: .3s border ease-out;
-    color: black;
+    color: #111;
     font-size: 1.8rem;
     cursor: pointer;
-    border-right: 1px solid gray;
-    padding: 0 .3rem 0 0;
+    border-right: 1px solid #697477;
+    padding: 0 .2rem 0 0;
+    height: 2rem;
 }
 .hidden {
     display: none;
