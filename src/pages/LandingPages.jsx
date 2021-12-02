@@ -6,12 +6,13 @@ import { useQuery } from "../hooks/useQuery";
 export function LandingPages() {
     const query = useQuery();
     const search = query.get("search");
-
     const searchDebounce = useDebounce(search, 300);
 
     return (
         <div>
-            <Search search={search} />
+            <header>
+                <Search search={search} />
+            </header>
             <MoviesGrid key={searchDebounce} search={searchDebounce} />
         </div>
     );

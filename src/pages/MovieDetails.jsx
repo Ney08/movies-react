@@ -37,9 +37,9 @@ export function MovieDetails() {
                     <strong>Title:</strong> {movie.title}
                 </p>
                 <p>
-                    <span className={styles.voteAverage}>
+                    <strong className={styles.voteAverage}>
                         {movie.vote_average}
-                    </span>{" "}
+                    </strong>{" "}
                     {movie.vote_count} <IoPersonSharp />
                 </p>
                 <p>

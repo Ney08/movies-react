@@ -13,6 +13,7 @@
 
 .movieImage {
     border-radius: 1.5rem;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.45);
 }
 
 .movieDetails {
@@ -24,10 +25,10 @@
 }
 
 .voteAverage {
-    background: red;
+    background:#1083D6;
     padding: 0 1.5rem .2rem;
     border-radius: .8rem;
     margin: 0 5rem 0 0;
     text-align: center;
-    
 }
+

@@ -1,33 +1,60 @@
-@import-normalize;
-
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: black;
-  color: white;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fbfbfe;
+    color: #697477;
+    transition: 0.3s background ease;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
 a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: #fbfbfe;
+}
+body.dark-mode a {
+    color: #2a3b47;
+}
+
+body.dark-mode {
+    background: #192229;
+    color: #dfdfdf;
+}
+
+body.dark-mode li {
+    color: #dfdfdf;
+}
+
+header {
+    background: #1083d6;
+}
+
+body.dark-mode header {
+    background: #52a5e0;
+}
+
+strong {
+    color: #111;
+}
+
+body.dark-mode strong {
+    color: #fff;
 }
