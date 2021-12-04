@@ -3,7 +3,7 @@
     margin: 0;
     display: flex;
     justify-content: center;
-    top: 3rem;
+    top: .5rem;
     position: relative;
+    padding: 2rem 0;
 }
-

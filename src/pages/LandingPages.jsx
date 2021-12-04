@@ -10,9 +10,7 @@ export function LandingPages() {
 
     return (
         <div>
-            <header>
-                <Search search={search} />
-            </header>
+            <Search search={search} />
             <MoviesGrid key={searchDebounce} search={searchDebounce} />
         </div>
     );

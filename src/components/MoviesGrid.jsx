@@ -11,7 +11,6 @@ export function MoviesGrid({ search }) {
     const [isLoading, setIsLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [hasMore, setHasmore] = useState(true);
-
     useEffect(() => {
         setIsLoading(true);
         const searchUrl = search

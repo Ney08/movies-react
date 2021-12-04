@@ -32,5 +32,5 @@ export function useDarkMode() {
 }
 
 function usePrefersDarkMode() {
-  return useMedia(["(prefers-color-scheme: dark)"], [true], false);
+  return useMedia(["(prefers-color-scheme: dark)"], [false], false);
 }

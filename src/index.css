@@ -45,10 +45,17 @@ body.dark-mode li {
 
 header {
     background: #1083d6;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.45);
+}
+header .fijo {
+    background: #1083d677;
+    position: fixed;
+    width: 100%;
 }
 
 body.dark-mode header {
     background: #52a5e0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.45);
 }
 
 strong {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Spinner } from "../components/Spinner";
+import { Spinner } from "./Spinner";
 import { get } from "../utils/httpClients";
 import styles from "./MovieDetails.module.css";
 import { IoPersonSharp } from "react-icons/io5";
