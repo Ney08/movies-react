@@ -14,13 +14,12 @@ import { Button } from "./components/Button";
 import { MovieDetailsSearch } from "./pages/MovieDetailsSearch";
 
 export function App() {
-    const path = "/";
     const [darkMode, setDarkMode] = useDarkMode();
     return (
         <div>
             <Router>
                 <header>
-                    <Link to={path}>
+                    <Link to="/">
                         <h1 className={styles.title}>Movies</h1>
                     </Link>
                     <Button darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -28,9 +27,9 @@ export function App() {
 
                 <main>
                     <Routes>
-                        <Route path={path + "movies/:movieId"} element={<MovieDetailsSearch />}/>
-                        <Route path={path} element={<LandingPages />}/>
-                        <Route path={"*"} element={<Navigate replace to={path}/>}/>
+                        <Route path="/movies/:movieId" element={<MovieDetailsSearch />} />
+                        <Route path="/" element={<LandingPages />} />
+                        <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </main>
             </Router>
