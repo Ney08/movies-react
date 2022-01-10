@@ -17,7 +17,7 @@ export function App() {
     const [darkMode, setDarkMode] = useDarkMode();
     return (
         <div>
-            <HashRouter>
+            <Router>
                 <header>
                     <Link to="/">
                         <h1 className={styles.title}>Movies</h1>
@@ -32,7 +32,7 @@ export function App() {
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </main>
-            </HashRouter>
+            </Router>
         </div>
     );
 }
