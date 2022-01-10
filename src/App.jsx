@@ -1,10 +1,11 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    //BrowserRouter as Router,
     Routes,
     Route,
     Link,
     HashRouter,
+    Navigate
 } from "react-router-dom";
 import { useDarkMode } from "./hooks/useDarkMode";
 import styles from "./App.module.css";
@@ -27,13 +28,9 @@ export function App() {
 
                 <main>
                     <Routes>
-                        <Route
-                            exact
-                            path={path + "movies/:movieId"}
-                            element={<MovieDetailsSearch />}
-                        ></Route>
-            
-                        <Route path={path} element={<LandingPages />}></Route>
+                        <Route path={path + "movies/:movieId"} element={<MovieDetailsSearch />}/>
+                        <Route path={path} element={<LandingPages />}/>
+                        <Route path={"*"} element={<Navigate replace to={path}/>}/>
                     </Routes>
                 </main>
             </HashRouter>

@@ -8,7 +8,6 @@ export function Button({ darkMode, setDarkMode }) {
                 <input
                     type="checkbox"
                     id="dmcheck"
-                    type="checkbox"
                     checked={darkMode}
                     onChange={() => setDarkMode(!darkMode)}
                 />

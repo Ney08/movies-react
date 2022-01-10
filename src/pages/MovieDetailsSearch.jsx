@@ -1,9 +1,9 @@
 import { Search } from "../components/Search";
-import { useQuery } from "../hooks/useQuery";
 import { MovieDetails } from "../components/MovieDetails"
+import { useSearchParams } from "react-router-dom";
 
 export function MovieDetailsSearch() {
-    const query = useQuery();
+    const [query] = useSearchParams();
     const search = query.get("search");
     return (
         <div>

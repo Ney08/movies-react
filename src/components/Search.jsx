@@ -1,14 +1,12 @@
 import styles from "./Search.module.css";
 import { FaSearch } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import { useQuery } from "../hooks/useQuery";
+import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 
 export function Search() {
-    const host = "/";
-    const navigate = useNavigate();
-    const query = useQuery();
+    //const navigate = useNavigate();
+    const [query, setQuery] = useSearchParams();
     const search = query.get("search");
 
     const [searchtext, setSearchText] = useState("");
@@ -30,14 +28,15 @@ export function Search() {
                     value={searchtext}
                     onChange={(e) => {
                         const value = e.target.value.trimStart();
-                        navigate(`${host}?search=${value}`);
+                        setQuery({search: value});
+                        //navigate(`/?search=${value}`);
                         setSearchText(value);
                     }}
                 />
                 <div
                     onClick={() => {
                         setSearchText("");
-                        navigate("");
+                        setQuery({search: ""});
                     }}
                     className={`${styles.deleteButton} ${
                         searchtext ? styles.display : styles.hidden
