@@ -4,7 +4,7 @@ import {
     Routes,
     Route,
     Link,
-    //HashRouter,
+    HashRouter,
     Navigate
 } from "react-router-dom";
 import { useDarkMode } from "./hooks/useDarkMode";
@@ -17,7 +17,7 @@ export function App() {
     const [darkMode, setDarkMode] = useDarkMode();
     return (
         <div>
-            <Router>
+            <HashRouter>
                 <header>
                     <Link to="/">
                         <h1 className={styles.title}>Movies</h1>
@@ -32,7 +32,7 @@ export function App() {
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </main>
-            </Router>
+            </HashRouter>
         </div>
     );
 }
