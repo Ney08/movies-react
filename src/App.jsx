@@ -1,10 +1,10 @@
 import React from "react";
 import {
-    //BrowserRouter as Router,
+    BrowserRouter as Router,
     Routes,
     Route,
     Link,
-    HashRouter,
+    //HashRouter,
     Navigate
 } from "react-router-dom";
 import { useDarkMode } from "./hooks/useDarkMode";
@@ -18,7 +18,7 @@ export function App() {
     const [darkMode, setDarkMode] = useDarkMode();
     return (
         <div>
-            <HashRouter>
+            <Router>
                 <header>
                     <Link to={path}>
                         <h1 className={styles.title}>Movies</h1>
@@ -33,7 +33,7 @@ export function App() {
                         <Route path={"*"} element={<Navigate replace to={path}/>}/>
                     </Routes>
                 </main>
-            </HashRouter>
+            </Router>
         </div>
     );
 }
