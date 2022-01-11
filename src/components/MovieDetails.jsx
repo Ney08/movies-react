@@ -5,8 +5,9 @@ import { get } from "../utils/httpClients";
 import styles from "./MovieDetails.module.css";
 import { IoPersonSharp } from "react-icons/io5";
 import { getMovieImg } from "../utils/getMovieImg";
+import { MoviesGrid } from "./MoviesGrid";
 
-export function MovieDetails() {
+export function MovieDetails({search}) {
     const { movieId } = useParams();
     const [movie, setMovie] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -24,6 +25,10 @@ export function MovieDetails() {
 
     const imageUrl = getMovieImg(movie.poster_path, 500);
 
+    if(search) {
+        return <MoviesGrid search={search}/>
+    }
+    
     return (
         <div className={styles.detailsContainer}>
             <img
@@ -54,5 +59,6 @@ export function MovieDetails() {
                 </p>
             </div>
         </div>
+        
     );
 }

@@ -1,18 +1,12 @@
 import styles from "./Search.module.css";
 import { FaSearch } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 
 export function Search() {
     //const navigate = useNavigate();
     const [query, setQuery] = useSearchParams();
     const search = query.get("search");
-
-    const [searchtext, setSearchText] = useState("");
-    useEffect(() => {
-        setSearchText(search || "");
-    }, [search]);
 
     const handleSubmit = (e) => e.preventDefault();
 
@@ -24,21 +18,18 @@ export function Search() {
                     type="text"
                     placeholder="Title"
                     aria-label="Search Movies"
-                    value={searchtext}
+                    value={search}
                     onChange={(e) => {
                         const value = e.target.value.trimStart();
                         setQuery({search: value});
-                        //navigate(`/?search=${value}`);
-                        setSearchText(value);
                     }}
                 />
                 <div
                     onClick={() => {
-                        setSearchText("");
                         setQuery({search: ""});
                     }}
                     className={`${styles.deleteButton} ${
-                        searchtext ? styles.display : styles.hidden
+                        search ? styles.display : styles.hidden
                     }`}
                 >
                     <HiOutlineX />
